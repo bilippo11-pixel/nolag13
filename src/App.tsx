@@ -1,34 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="main-container">
+      <nav>
+        <div className="logo">
+          <img src="https://vitejs.dev/logo.svg" alt="logo" />
+        </div>
+        <ul>
+          <li>Strona Główna</li>
+          <li>Cennik</li>
+          <li>Kontakt</li>
+        </ul>
+      </nav>
+
+      <div className="hero">
+        <h1>Przeglądaj produkty!</h1>
+        <p>Wybierz pakiet Nolag idealny dla siebie.</p>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+
+      <div className="cards">
+        <div className="card">
+          <h2>Nolag Normal</h2>
+          <div className="price">20 zł</div>
+          <ul className="features">
+            <li>Dostęp do Nolag</li>
+            <li>Regularne aktualizacje</li>
+            <li>Wsparcie 24/7</li>
+          </ul>
+          <a className="buy-btn" href="https://discord.gg/KPGvnp3Y">Kup</a>
+        </div>
+
+        <div className="card">
+          <h2>Nolag Pro</h2>
+          <div className="price">50 zł</div>
+          <ul className="features">
+            <li>Wszystko z Normal</li>
+            <li>Priorytetowe wsparcie</li>
+            <li>Szybsze aktualizacje</li>
+          </ul>
+          <a className="buy-btn" href="https://discord.gg/KPGvnp3Y">Kup</a>
+        </div>
+
+        <div className="card">
+          <h2>Nolag Extra</h2>
+          <div className="price">100 zł</div>
+          <ul className="features">
+            <li>Wszystko z Pro</li>
+            <li>Beta dostęp</li>
+            <li>Ekskluzywne funkcje</li>
+          </ul>
+          <a className="buy-btn" href="https://discord.gg/KPGvnp3Y">Kup</a>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
